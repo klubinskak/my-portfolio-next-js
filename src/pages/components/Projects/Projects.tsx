@@ -11,7 +11,7 @@ const projectList = [
     desc: "Full Stack Ecommerce Website build with React, Node.js, MongoDB & Express. 🛍️",
     skills: "React, Node.js, MongoDB, Express",
     github: "https://github.com/klubinskak/ecommerce-react-mern",
-    link: "",
+    website: "/",
   },
   {
     name: "Netflix Clone",
@@ -19,7 +19,7 @@ const projectList = [
     desc: "Full Stack Netflix Clone build with React, Tailwind CSS, Movie API, & Firebase. 🍿",
     skills: "React, TailwindCSS, Movie API, Firebase",
     github: "https://github.com/klubinskak/netflix-clone-react.git",
-    link: "",
+    website: "/",
   },
   {
     name: "Cryptocurrency App",
@@ -27,7 +27,7 @@ const projectList = [
     desc: "Front end application build with React JS, Ant.Design & API. 🤑",
     skills: "React JS, Ant.Design, API",
     github: "https://github.com/klubinskak/cryptocurrency-app",
-    link: "",
+    website: "/",
   },
   {
     name: "Disney+ Clone",
@@ -36,7 +36,7 @@ const projectList = [
       "https://user-images.githubusercontent.com/76222513/201928068-fe89eab8-864b-4ab6-9aef-d0300709e049.png",
     skills: "NextJS, TailwindCSS, Upstash, Typescript",
     github: "https://github.com/klubinskak/disney-plus-clone",
-    link: "",
+    website: "/",
   },
   {
     name: "Messenger Clone",
@@ -45,7 +45,7 @@ const projectList = [
       "https://user-images.githubusercontent.com/76222513/211889223-9f29967d-6736-48ec-84b1-eceb8b877b5f.png",
     skills: "NextJS, Hygraph, TailwindCSS, GraphQL",
     github: "https://github.com/klubinskak/messenger-2.0",
-    link: "",
+    website: "/",
   },
 ];
 
@@ -65,7 +65,7 @@ const Projects = () => {
             description={item.desc}
             image={item.image}
             github = {item.github}
-            link= {item.link}
+            website= {item.website}
           />
         );
       })}

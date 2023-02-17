@@ -9,11 +9,11 @@ interface Props {
   description: string;
   image: string | StaticImageData;
   github: string;
-  link: string;
+  website: string;
 }
 
 const Project: NextPage<Props> = (props) => {
-  const { name, description, image, github, link } = props;
+  const { name, description, image, github, website } = props;
 
   return (
     <div className="flex flex-col items-center justify-center w-full gap-5 p-10 px-8 lg:flex-row">
@@ -28,13 +28,13 @@ const Project: NextPage<Props> = (props) => {
         <h1 className="p-2 text-xl font-bold text-center text-black">{name}</h1>
         <h3>{description}</h3>
         <div className="flex flex-row items-center justify-center gap-4 p-2 mt-2 text-center">
-          <Link href={github} target="_blank">
+          <Link href={github || ""} target="_blank">
             <BsGithub
               size={25}
               className="transition transition-transform cursor-pointer hover:translate-y-[-5px]"
             />
           </Link>
-          <Link href={link}>
+          <Link href={website || ""}>
             <BsArrowUpRightSquare
               size={25}
               className="transition transition-transform cursor-pointer duration-150 delay-150  hover:translate-y-[-5px]"
