@@ -5,7 +5,9 @@ const env = process.env.NODE_ENV;
 export default function Document() {
   return (
     <Html lang="en">
-      <Head/>
+      <Head>
+        <title>Klaudia Klubinska</title>
+      </Head>
       <body className={ env == "development" ? "debug-screens" : ""}>
         <Main />
         <NextScript />
