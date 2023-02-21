@@ -30,20 +30,18 @@ const Hero = () => {
           offset={-150}
           duration={500}
         >
-          <button className="flex items-center justify-center gap-2 p-2 px-4 py-2 text-xs text-white duration-300 bg-black rounded hover:opacity-80 group">
+          <button data-testid="contact-me" className="flex items-center justify-center gap-2 p-2 px-4 py-2 text-xs text-white duration-300 bg-black rounded hover:opacity-80 group">
             <p>Contact Me</p>
             <TbSend className="group-hover:rotate-45" />
           </button>
         </Link>
       </div>
       <div className="flex items-center justify-center">
-        {/* <div className="rounded bg-gray-200 w-[31vw] h-[51vh] flex items-center justify-center"> */}
         <Image
           src={avatar}
           alt="avatar-home"
           className="max-w-[400px] text-center my-5 max-h-[400px] object-cover rounded-[50%]"
         />
-        {/* </div> */}
       </div>
     </div>
   );

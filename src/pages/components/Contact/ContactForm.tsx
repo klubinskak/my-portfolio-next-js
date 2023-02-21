@@ -25,6 +25,7 @@ const ContactForm = () => {
 
 
   const { name, email, subject, message } = values;
+  console.log(values);
 
   //required
   const onBlur = (target:EventTarget & HTMLInputElement) => setTouched((prev) => {
@@ -37,13 +38,13 @@ const ContactForm = () => {
       ...prev,
       [name]: value,
     }));
-    console.log(values);
   };
 
   const handleSubmit = async () => {
     setisLoading(true);
     await sendContactForm(values);
     toast({
+      
       title: 'Email send',
       description: "Thanks for your message, I'll respond as soon as possible!",
       status: 'success',
@@ -52,9 +53,6 @@ const ContactForm = () => {
     })
     setisLoading(false);
   }
-
-  
-  console.log(!name);
   
   return (
     <>
@@ -63,6 +61,7 @@ const ContactForm = () => {
           <Input
             placeholder="Insert your name*"
             type="text"
+            value={name}
             name="name"
             onBlur={(e) => onBlur(e.target)}
             errorBorderColor="red.300"

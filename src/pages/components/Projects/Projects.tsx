@@ -36,7 +36,7 @@ const projectList = [
       "https://user-images.githubusercontent.com/76222513/201928068-fe89eab8-864b-4ab6-9aef-d0300709e049.png",
     skills: "NextJS, TailwindCSS, Upstash, Typescript",
     github: "https://github.com/klubinskak/disney-plus-clone",
-    website: "/",
+    website: "https://disneyplusclone2.netlify.app",
   },
   {
     name: "Messenger Clone",
