@@ -7,6 +7,7 @@ import Timeline from './Timeline';
 
 const Journey = () => {
   return (
+    <section id="skills">
     <div className="flex flex-col items-center justify-center" id="journey">
         <p className='text-3xl font-bold'>My Personal Journey</p>
         <hr className="w-10 h-1 mx-auto my-2 bg-[#839788] border-0 rounded"/>
@@ -22,6 +23,7 @@ const Journey = () => {
         </div>
         <Timeline/>
     </div>
+    </section>
   )
 }
 

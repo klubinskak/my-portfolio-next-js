@@ -7,6 +7,7 @@ import Container from "./Container";
 
 const Contact = () => {
   return (
+    <section id="contact">
     <div className="flex flex-col items-center w-full" id="contact">
       <h1 className="pb-2 text-3xl font-bold">Contact Me</h1>
       <hr className="w-10 h-1 mx-auto bg-[#839788] border-0 rounded" />
@@ -34,6 +35,7 @@ const Contact = () => {
         </div>
       </div>
     </div>
+    </section>
   );
 };
 

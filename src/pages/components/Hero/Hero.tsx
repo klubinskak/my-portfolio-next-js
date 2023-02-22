@@ -7,7 +7,7 @@ import Type from "./Type";
 
 const Hero = () => {
   return (
-    <div id="/" className="items-center justify-center py-10 space-x-5 text-center lg:gap-10 md:flex">
+    <div id="home" className="items-center justify-center py-10 space-x-5 text-center lg:gap-10 md:flex">
       {" "}
       <div className="flex flex-col items-center justify-center space-y-2 ">
         <div className="flex gap-2 text-4xl">

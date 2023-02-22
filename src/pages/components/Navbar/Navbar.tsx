@@ -1,8 +1,8 @@
 import React, { useState, useEffect } from "react";
-import { Link } from "react-scroll";
 import { IoMdMenu, IoMdClose } from "react-icons/io";
 import {useTheme} from "next-themes";
 import{ SunIcon ,MoonIcon } from "@heroicons/react/solid";
+import  Link  from 'next/link';
 
 interface NavItems {
   label: string;
@@ -13,27 +13,27 @@ interface NavItems {
 const NAV_ITEMS: Array<NavItems> = [
   {
     label: "Home",
-    page: "/",
+    page: "#home",
     index: 0,
   },
   {
     label: "About",
-    page: "about",
+    page: "#about",
     index: 1,
   },
   {
     label: "Skills",
-    page: "skills",
+    page: "#skills",
     index: 2,
   },
   {
     label: "Projects",
-    page: "projects",
+    page: "#projects",
     index: 3,
   },
   {
     label: "Contact",
-    page: "contact",
+    page: "#contact",
     index: 4,
   },
   // {
@@ -101,7 +101,7 @@ const Navbar = () => {
     >
       <div className="flex justify-around mx-10">
         <div className="flex gap-1 text-xl font-bold cursor-pointer">
-          <Link to="/" spy={true} smooth={true} offset={-150} duration={500}>
+          <Link href="#about-me" scroll={false}>
             {" "}
             <h2 className="text-3xl">
               👩🏼‍💻 Klubinska
@@ -113,10 +113,11 @@ const Navbar = () => {
           {NAV_ITEMS.map((item) => {
             return (
               <Link
+                scroll={false}
                 onClick={() => {
                   setActiveButtonIndex(item.index);
                 }}
-                to={item.page}
+                href={item.page}
                 className={`hidden ${navbar? 'showList' : ''} lg:flex cursor-pointer before:hidden before:lg:absolute before:block before:w-full before:h-[3px] 
                 before:bottom-0 before:left-0 before:bg-[#839788] 
                 before:hover:scale-x-100 before:scale-x-0 before:origin-top-left
@@ -125,10 +126,7 @@ const Navbar = () => {
                     ? "after:absolute after:top-20 after:lg:hidden after:hidden after:block after:w-full after:h-[3px] after:bottom-0 after:left-0 after:bg-[#839788] "
                     : ""
                 }`}
-                spy={true}
-                smooth={true}
-                offset={-150}
-                duration={500}
+
               >
                 {item.label}
               </Link>

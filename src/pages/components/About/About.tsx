@@ -6,6 +6,7 @@ import Link from 'next/link';
 
 function About() {
   return (
+    <section className='p-5'>
     <div id="about" className="flex flex-col py-[30px] items-center justify-center">
       <p className='text-3xl font-bold'>About me</p>
       <hr className="w-10 h-1 mx-auto my-2 bg-[#839788] border-0 rounded"/>
@@ -26,6 +27,7 @@ function About() {
         </div>
       </div>
     </div>
+    </section>
   )
 }
 
