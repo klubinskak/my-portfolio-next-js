@@ -1,8 +1,13 @@
 import React from "react";
 import Project from "./Project";
-import netflix from '../../../assets/projects/netflix.png'
-import ecommerce from '../../../assets/projects/ecommerce-mern.png'
-import cryptoapp from '../../../assets/projects/cryptocurrencyApp.png'
+import netflix from "../../../assets/projects/netflix.png";
+import { motion } from "framer-motion";
+import ecommerce from "../../../assets/projects/ecommerce-mern.png";
+import cryptoapp from "../../../assets/projects/cryptocurrencyApp.png";
+import {
+  staggerContainer,
+} from "../../../utils/motion";
+import CustomText from "./CustomText";
 
 const projectList = [
   {
@@ -52,24 +57,40 @@ const projectList = [
 const Projects = () => {
   return (
     <div
-      className="flex flex-col items-center justify-center py-[50px] w-full h-full text-center"
+      className="flex flex-col items-center justify-center py-[150px] w-full h-full text-center"
       id="projects"
     >
-      <h1 className="text-3xl font-bold">Projects</h1>
-      <hr className="w-10 h-1 mx-auto my-2 bg-[#839788] border-0 rounded"/>
-      <div className=" gap-[20px] animate-slideUpCubiBezier w-[70%] h-full mt-5 animation-delay-2">
-      {projectList.map((item) => {
-        return (
-          <Project
-            name={item.name}
-            description={item.desc}
-            image={item.image}
-            github = {item.github}
-            website= {item.website}
-          />
-        );
-      })}
-      </div>
+      <motion.div
+        variants={staggerContainer}
+        initial="hidden"
+        whileInView="show"
+        viewport={{ once: false, amount: 0.25 }}
+      >
+        <CustomText
+          title="Projects"
+          textStyles="text-center text-3xl font-bold"
+        />
+      </motion.div>
+      <hr className="w-10 h-1 mx-auto my-2 bg-[#839788] border-0 rounded" />
+      <motion.div
+        initial={{ x: 0, opacity: 0 }}
+        whileInView={{ x: [-250, 0], opacity: 1 }}
+        viewport={{ once: false }}
+        transition={{ duration: 0.5 }}
+        className=" gap-[20px] animate-slideUpCubiBezier w-[70%] h-full mt-5 animation-delay-2"
+      >
+        {projectList.map((item) => {
+          return (
+            <Project
+              name={item.name}
+              description={item.desc}
+              image={item.image}
+              github={item.github}
+              website={item.website}
+            />
+          );
+        })}
+      </motion.div>
     </div>
   );
 };

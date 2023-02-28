@@ -12,7 +12,7 @@ const Container: NextPage<Props> = (props) => {
   const { title, link, icon } = props;
 
   return (
-    <div className="w-[250px] h-[150px] border-gray-100 pt-8 space-y-3 border-2 rounded-2xl flex-col justify-between items-center text-center">
+    <div id="container-contact" className="w-[250px] h-[150px] border-gray-100 pt-8 space-y-3 border-2 rounded-2xl flex-col justify-between items-center text-center">
       <Link href={link ?? ""} className="flex items-center justify-center text-center">
         {icon}
       </Link>

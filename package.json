@@ -22,7 +22,7 @@
     "@testing-library/react": "^14.0.0",
     "@types/node": "18.11.18",
     "classnames": "^2.3.2",
-    "framer-motion": "^9.0.1",
+    "framer-motion": "^9.0.7",
     "github-calendar": "^2.3.2",
     "hamburger-react": "^2.5.0",
     "heroicons": "^2.0.15",

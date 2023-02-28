@@ -4,10 +4,17 @@ import Image from "next/image";
 import { Link } from "react-scroll";
 import avatar from "../../../assets/avatar3.jpg";
 import Type from "./Type";
+import { navVariants, slideIn } from '../../../utils/motion';
+import { motion } from "framer-motion";
+
 
 const Hero = () => {
   return (
-    <div id="home" className="items-center justify-center py-10 space-x-5 text-center lg:gap-10 md:flex">
+    <motion.div
+    variants={navVariants}
+    initial="hidden"
+    whileInView="show"
+    id="home" className="items-center justify-center h-[100vh] py-10 md:p-0 space-x-5 text-center lg:gap-10 md:flex">
       {" "}
       <div className="flex flex-col items-center justify-center space-y-2 ">
         <div className="flex gap-2 text-4xl">
@@ -36,14 +43,15 @@ const Hero = () => {
           </button>
         </Link>
       </div>
-      <div className="flex items-center justify-center">
+      <div 
+      className="flex items-center justify-center">
         <Image
           src={avatar}
           alt="avatar-home"
           className="max-w-[400px] text-center my-5 max-h-[400px] object-cover rounded-[50%]"
         />
       </div>
-    </div>
+    </motion.div>
   );
 };
 

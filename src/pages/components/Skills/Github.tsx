@@ -1,20 +1,18 @@
 import React from "react";
 import Githubcalendar from "react-github-calendar";
 import { AiFillGithub } from "react-icons/ai";
+import { motion } from "framer-motion";
 
 const Github = () => {
-  const colourTheme = {
-    background: "transparent",
-    text: "#ffffff",
-    grade4: "#8400b8",
-    grade3: "#b22ff4",
-    grade2: "#b265f6",
-    grade1: "#c084f5",
-    grade0: "#ecd9fc",
-  };
   return (
-    <div className="p-[30px] flex justify-content items-center flex-col text-3xl">
-      <div className="py-[50px]">
+    <div className="p-[30px] flex justify-content items-center flex-col text-3xl h-[85vh]">
+      <motion.div
+        initial={{ y: 0, opacity: 0 }}
+        viewport={{ once: false }}
+        whileInView={{ y: [-150, 0], opacity: 1 }}
+        transition={{ duration: 1 }}
+        className="py-[50px]"
+      >
         <p className="font-bold"> Days I code </p>
         <div className="flex flex-col items-center justify-center text-center">
           <a
@@ -24,14 +22,19 @@ const Github = () => {
             <AiFillGithub className="transition-transform cursor-pointer hover:translate-y-1" />
           </a>
         </div>
-      </div>
-      <Githubcalendar
-        username="klubinskak"
-        blockSize={15}
-        blockMargin={5}
-        // theme={colourTheme}
-        fontSize={16}
-      />
+      </motion.div>
+      <motion.div
+        initial={{ x: 0, opacity: 0 }}
+        whileInView={{ x: [-250, 0], opacity: 1 }}
+        viewport={{once: false}}
+        transition={{ duration: 0.5 }}>
+        <Githubcalendar
+          username="klubinskak"
+          blockSize={15}
+          blockMargin={5}
+          fontSize={16}
+        />
+      </motion.div>
     </div>
   );
 };

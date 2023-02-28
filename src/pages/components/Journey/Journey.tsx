@@ -2,14 +2,27 @@ import React from 'react'
 import { IoIosSchool } from "react-icons/io";
 import { MdWork } from "react-icons/md";
 import Timeline from './Timeline';
+import { motion } from "framer-motion";
+import CustomText from "../Projects/CustomText";
+import { staggerContainer } from "@/utils/motion";
 
 
 
 const Journey = () => {
   return (
-    <section id="skills">
+    <section id="skills" className='h-[100vh]'>
     <div className="flex flex-col items-center justify-center" id="journey">
-        <p className='text-3xl font-bold'>My Personal Journey</p>
+        <motion.div
+        variants={staggerContainer}
+        initial="hidden"
+        whileInView="show"
+        viewport={{ once: false, amount: 0.25 }}
+      >
+        <CustomText
+          title="My Personal Journey"
+          textStyles="text-center text-3xl font-bold"
+        />
+      </motion.div>
         <hr className="w-10 h-1 mx-auto my-2 bg-[#839788] border-0 rounded"/>
         <div className="flex gap-[50px] py-5">
             <div className="flex items-center gap-2">

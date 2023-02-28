@@ -3,6 +3,8 @@ import { IoMdMenu, IoMdClose } from "react-icons/io";
 import {useTheme} from "next-themes";
 import{ SunIcon ,MoonIcon } from "@heroicons/react/solid";
 import  Link  from 'next/link';
+import { navVariants } from '../../../utils/motion';
+import { motion } from "framer-motion";
 
 interface NavItems {
   label: string;
@@ -96,12 +98,15 @@ const Navbar = () => {
 
 
   return (
-    <div
+    <motion.div
+      variants={navVariants}
+      initial="hidden"
+      whileInView="show"
       className={`p-5 sticky top-0 z-50 bg-white`} id="navbar"
     >
       <div className="flex justify-around mx-10">
         <div className="flex gap-1 text-xl font-bold cursor-pointer">
-          <Link href="#about-me" scroll={false}>
+          <Link href="#home" scroll={false}>
             {" "}
             <h2 className="text-3xl">
               👩🏼‍💻 Klubinska
@@ -168,7 +173,7 @@ const Navbar = () => {
         }
         `}
       </style>
-    </div>
+    </motion.div>
   );
 };
 
