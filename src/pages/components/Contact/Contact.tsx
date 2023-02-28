@@ -6,14 +6,14 @@ import ContactForm from "./ContactForm";
 import Container from "./Container";
 import { motion } from "framer-motion";
 import CustomText from "../Projects/CustomText";
-import { slideIn, staggerContainer } from "@/utils/motion";
+import { staggerContainer } from "@/utils/motion";
 
 const Contact = () => {
   return (
     <section id="contact py-[50px]">
       <div className="flex flex-col items-center w-full" id="contact">
         <motion.div
-          variants={staggerContainer}
+          variants={staggerContainer(0.5, 0.25)}
           initial="hidden"
           whileInView="show"
           viewport={{ once: false, amount: 0.25 }}
@@ -26,9 +26,9 @@ const Contact = () => {
         <hr className="w-10 h-1 mx-auto bg-[#839788] border-0 rounded" />
         <div className="md:flex items-center justify-center py-12 md:space-x-[150px]">
           <motion.div
-           variants={slideIn('left', 'tween', 0.2, 1)}
-           initial="hidden"
-           whileInView="show"
+          initial={{ x: 0, opacity: 0 }}
+          whileInView={{ x: [-250, 0], opacity: 1 }}
+          transition={{ duration: 1 }}
            viewport={{once: false, amount: 0.25}}
           className="flex flex-col items-center justify-center space-y-4">
             <Container
@@ -48,10 +48,9 @@ const Contact = () => {
             />
           </motion.div>
           <motion.div
-          variants={slideIn('right', 'tween', 0.2, 1)}
-          initial="hidden"
-          whileInView="show"
-          viewport={{once: false, amount: 0.25}}
+          initial={{ x: 0, opacity: 0 }}
+          whileInView={{ x: [250, 0], opacity: 1 }}
+          transition={{ duration: 1 }}
           className="space-y-2">
             <p className="py-2 mt-10 font-bold md:mt-0">Send me a message </p>
             <ContactForm />

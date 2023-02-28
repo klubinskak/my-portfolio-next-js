@@ -13,8 +13,8 @@ const Journey = () => {
     <section id="skills" className='h-[100vh]'>
     <div className="flex flex-col items-center justify-center" id="journey">
         <motion.div
-        variants={staggerContainer}
-        initial="hidden"
+          variants={staggerContainer(0.5, 0.25)}
+          initial="hidden"
         whileInView="show"
         viewport={{ once: false, amount: 0.25 }}
       >

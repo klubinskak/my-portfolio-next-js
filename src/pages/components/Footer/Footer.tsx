@@ -3,7 +3,7 @@ import React from 'react'
 import { AiFillGithub, AiFillLinkedin } from 'react-icons/ai'
 import {SiBloglovin} from 'react-icons/si';
 import { motion } from "framer-motion";
-import { footerVariants, slideIn, staggerContainer } from "@/utils/motion";
+import { footerVariants, slideIn } from "@/utils/motion";
 
 const Footer = () => {
   return (

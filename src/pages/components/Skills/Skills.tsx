@@ -30,8 +30,8 @@ function Skills() {
         className="flex h-[100vh] flex-col justify-center items-center p-5 mt-5 py-[30px]"
       >
               <motion.div
-        variants={staggerContainer}
-        initial="hidden"
+          variants={staggerContainer(0.5, 0.5)}
+          initial="hidden"
         whileInView="show"
         viewport={{ once: false, amount: 0.25 }}
       >

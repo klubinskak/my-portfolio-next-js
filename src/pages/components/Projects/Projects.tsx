@@ -61,7 +61,7 @@ const Projects = () => {
       id="projects"
     >
       <motion.div
-        variants={staggerContainer}
+        variants={staggerContainer(0.5, 0.25)}
         initial="hidden"
         whileInView="show"
         viewport={{ once: false, amount: 0.25 }}
