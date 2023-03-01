@@ -53,29 +53,9 @@ const Navbar = () => {
 
   
 
-  //checking the scroll position and underline current section
   useEffect(() => {
     setMounted(true);
-    const setButtonIndex = () => {
-      if (window.scrollY >= -150) {
-        setActiveButtonIndex(0);
-      }
-      if (window.scrollY >= 150) {
-        setActiveButtonIndex(1);
-      }
-      if (window.scrollY >= 640) {
-        setActiveButtonIndex(2);
-      }
-      if (window.scrollY >= 2350) {
-        setActiveButtonIndex(3);
-      }
-      if (window.scrollY >= 3900) {
-        setActiveButtonIndex(4);
-      }
-    };
-    window.addEventListener("scroll", setButtonIndex);
-    console.log("Index:" + activeButtonIndex);
-  }, [activeButtonIndex]);
+  }, []);
 
   const renderThemeChanger= () => {
     if(!mounted) return null;
@@ -108,9 +88,12 @@ const Navbar = () => {
         <div className="flex gap-1 text-xl font-bold cursor-pointer">
           <Link href="#home" scroll={false}>
             {" "}
-            <h2 className="text-3xl">
-              👩🏼‍💻 Klubinska
-            </h2>
+            <div className="flex items-center justify-center gap-2">
+            <img width={40} height={40} src="https://i.ibb.co/tHhKDZZ/Screenshot-2023-03-01-at-11-08-19-removebg-preview.png" alt="woman-computer-icon"/>
+              <h2 className="text-2xl">
+                Klubinska
+              </h2>
+            </div>
           </Link>
         </div>
         <div className={`flex items-center gap-5 font-semibold ${navbar ? "showMobileNav" : ""} `}>
