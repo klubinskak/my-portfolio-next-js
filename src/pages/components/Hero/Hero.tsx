@@ -14,18 +14,18 @@ const Hero = () => {
     variants={navVariants}
     initial="hidden"
     whileInView="show"
-    id="home" className="items-center justify-center h-[100vh] py-10 md:p-0 space-x-5 text-center lg:gap-10 md:flex">
+    id="home" className="w-full h-full items-center justify-center h-[100vh] py-10 md:p-0 text-center lg:gap-10 md:flex">
       {" "}
-      <div className="flex flex-col items-center justify-center space-y-2 ">
+      <div className="flex flex-col items-center justify-center space-y-3 ">
         <div className="flex gap-2 text-4xl">
           <Type />
         </div>
         <div className="flex items-center gap-2 font-bold text-center">
           <hr className="w-[70px]" />
-          <p className="text-xs text-black">Software Engineer</p>
+          <p id="job-title" className="text-xs text-black">Software Engineer</p>
           <hr className="w-[70px]" />
         </div>
-        <p className="text-sm font-normal w-[450px] text-center">
+        <p className="text-sm font-normal md:w-[450px] text-center w-[300px] ">
           A passionate Software Engineer having an experience of building Web
           applications with JavaScript / React / Nodejs / MongoDB / TailwindCSS and some
           other cool libraries and frameworks.
@@ -48,7 +48,7 @@ const Hero = () => {
         <Image
           src={avatar}
           alt="avatar-home"
-          className="max-w-[400px] text-center my-5 max-h-[400px] object-cover rounded-[50%]"
+          className="max-w-[280px] lg:max-w-[350px] text-center md:my-5 my-10 max-h-[280px] lg:max-h-[350px] object-cover rounded-[50%]"
         />
       </div>
     </motion.div>

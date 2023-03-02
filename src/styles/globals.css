@@ -63,6 +63,9 @@ body {
         @apply dark:bg-black
     }
     
+    #job-title{
+      @apply dark:text-white;
+    }
 
     ::selection {
       @apply text-white bg-indigo-500;

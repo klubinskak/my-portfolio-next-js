@@ -84,7 +84,7 @@ const Navbar = () => {
       whileInView="show"
       className={`p-5 sticky top-0 z-50 bg-white`} id="navbar"
     >
-      <div className="flex justify-around mx-10">
+      <div className="flex items-center justify-around gap-10 mx-10">
         <div className="flex gap-1 text-xl font-bold cursor-pointer">
           <Link href="#home" scroll={false}>
             {" "}
@@ -96,8 +96,8 @@ const Navbar = () => {
             </div>
           </Link>
         </div>
-        <div className={`flex items-center gap-5 font-semibold ${navbar ? "showMobileNav" : ""} `}>
-          <button id="hamburger-btn" onClick={() => setNavbar(!navbar)} className={`flex items-center lg:hidden lg:${navbar===false}`}> {navbar ? <IoMdClose size={30} /> : <IoMdMenu size={30}/>}</button>
+        <div className={`flex items-center gap-3 md:gap-10 font-semibold ${navbar ? "showMobileNav" : ""} `}>
+          <button id="hamburger-btn" onClick={() => setNavbar(!navbar)} className={`flex mt-1 items-center lg:hidden lg:${navbar===false}`}> {navbar ? <IoMdClose size={30} /> : <IoMdMenu size={30}/>}</button>
           {NAV_ITEMS.map((item) => {
             return (
               <Link
@@ -152,7 +152,9 @@ const Navbar = () => {
           .showList{
             background: black;
             display: flex;
+            align-items: center;
           }
+
         }
         `}
       </style>

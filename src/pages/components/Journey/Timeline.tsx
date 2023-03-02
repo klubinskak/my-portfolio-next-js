@@ -25,7 +25,7 @@ const Timeline = () => {
           iconStyle={{ background: "#839788", color: "#fff" }}
           icon={<MdWork/>}
         >
-          <h3 className="font-bold text-center text-gray-600 vertical-timeline-element-title">Software Engineer</h3>
+          <h3 className="font-bold text-gray-600 vertical-timeline-element-title">Software Engineer</h3>
           <h4 className="text-xs text-center text-gray-300 vertical-timeline-element-subtitle">Kraków, Poland</h4>
           <h5 className="mt-2 text-sm text-center text-gray-400">
             React, Typescript, C#, Sharepoint Framework, Adaptive Cards

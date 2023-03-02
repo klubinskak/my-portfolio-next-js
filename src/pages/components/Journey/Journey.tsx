@@ -10,7 +10,7 @@ import { staggerContainer } from "@/utils/motion";
 
 const Journey = () => {
   return (
-    <section id="skills" className='h-[100vh]'>
+    <section id="skills" className='h-full'>
     <div className="flex flex-col items-center justify-center" id="journey">
         <motion.div
           variants={staggerContainer(0.5, 0.25)}

@@ -5,7 +5,7 @@ import { motion } from "framer-motion";
 
 const Github = () => {
   return (
-    <div className="p-[30px] flex justify-content items-center flex-col text-3xl h-[85vh]">
+    <div className="p-[30px] flex justify-content items-center flex-col text-3xl h-[75vh]">
       <motion.div
         initial={{ y: 0, opacity: 0 }}
         viewport={{ once: false }}

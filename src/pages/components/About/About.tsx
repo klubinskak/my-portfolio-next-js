@@ -4,9 +4,6 @@ import avatar from "../../../assets/avatar2.jpg";
 import { AiFillFileText } from "react-icons/ai";
 import Link from "next/link";
 import {
-  navVariants,
-  slideIn,
-  slideVariants,
   staggerContainer,
 } from "../../../utils/motion";
 import { motion } from "framer-motion";
@@ -14,7 +11,7 @@ import CustomText from "../Projects/CustomText";
 
 function About() {
   return (
-    <section className="p-5 h-[50vh]">
+    <section className="h-full p-5">
       <motion.div
         initial={{ x: 0, opacity: 0 }}
         whileInView={{ x: [-250, 0], opacity: 1 }}
