@@ -66,7 +66,7 @@ const Projects = () => {
         className="flex flex-col items-center justify-center py-[150px] w-full h-full text-center"
       >
         <motion.div
-          variants={staggerContainer}
+          variants={staggerContainer()}
           initial="hidden"
           whileInView="show"
           viewport={{ once: false, amount: 0.25 }}

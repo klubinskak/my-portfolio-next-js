@@ -15,7 +15,7 @@ function About() {
         className="flex flex-col justify-center items-center p-5 mt-5 py-[30px]"
       >
         <motion.div
-          variants={staggerContainer}
+          variants={staggerContainer()}
           initial="hidden"
           whileInView="show"
           viewport={{ once: false, amount: 0.25 }}

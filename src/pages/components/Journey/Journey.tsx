@@ -14,7 +14,7 @@ const Journey = () => {
     <section id="skills" className={`${styles.paddings}`}>
       <div className="flex flex-col items-center space-y-6 justify-center" id="journey">
         <motion.div
-          variants={staggerContainer}
+          variants={staggerContainer()}
           initial="hidden"
           whileInView="show"
           viewport={{ once: false, amount: 0.25 }}
