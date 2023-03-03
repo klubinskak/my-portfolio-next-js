@@ -28,8 +28,8 @@ const ContactForm = () => {
   console.log(values);
 
   //required
-  const onBlur = (target:EventTarget & HTMLInputElement) => setTouched((prev) => {
-    ({...prev, [target.name]: true})
+  const onBlur = (target: EventTarget & HTMLInputElement) => setTouched((prev) => {
+    ({ ...prev, [target.name]: true })
   })
 
 
@@ -44,7 +44,7 @@ const ContactForm = () => {
     setisLoading(true);
     await sendContactForm(values);
     toast({
-      
+
       title: 'Email send',
       description: "Thanks for your message, I'll respond as soon as possible!",
       status: 'success',
@@ -53,7 +53,7 @@ const ContactForm = () => {
     })
     setisLoading(false);
   }
-  
+
   return (
     <>
       <form>
@@ -81,7 +81,7 @@ const ContactForm = () => {
           />
           <FormErrorMessage>Required</FormErrorMessage>
         </FormControl>
-        
+
         <FormControl isRequired isInvalid={!touched && !subject} mb={8}>
           <Input
             placeholder="Insert subject*"
@@ -106,12 +106,12 @@ const ContactForm = () => {
           <FormErrorMessage>Required</FormErrorMessage>
         </FormControl>
         <div className="flex items-center justify-center md:justify-start ">
-        <Button  className="mt-2 bg-black rounded md:flex hover:opacity-80 group" type="button" colorScheme="black" isDisabled={!message} isLoading={isLoading} onClick={handleSubmit} >Submit</Button>
+          <Button className="mt-2 bg-black rounded md:flex hover:opacity-80 group" type="button" colorScheme="black" isDisabled={!message} isLoading={isLoading} onClick={handleSubmit} >Submit</Button>
         </div>
       </form>
     </>
 
-    
+
   );
 };
 

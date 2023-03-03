@@ -14,34 +14,30 @@ import firebase from "../../../assets/technology/firebase.png";
 import csharp from "../../../assets/technology/csharp.svg";
 import python from "../../../assets/technology/python.png";
 import Github from "./Github";
-import { motion } from "framer-motion";
 import CustomText from "../Projects/CustomText";
+import styles from "@/styles";
+import { motion } from "framer-motion";
 import { staggerContainer } from "@/utils/motion";
 
 function Skills() {
   return (
-    <div>
-      <motion.div
-        initial={{ x: 0, opacity: 0 }}
-        viewport={{once: false}}
-        whileInView={{ x: [250, 0], opacity: 1 }}
-        transition={{ duration: 1}}
-        id="skills"
-        className="flex h-[100vh] flex-col justify-center items-center p-5 mt-5 py-[30px]"
+    <section id="skills" className={`${styles.paddings}`}>
+      <div
+        className="flex flex-col justify-center items-center p-5 mt-5 py-[30px]"
       >
-              <motion.div
-          variants={staggerContainer(0.5, 0.5)}
+        <motion.div
+          variants={staggerContainer}
           initial="hidden"
-        whileInView="show"
-        viewport={{ once: false, amount: 0.25 }}
-      >
-        <CustomText
-          title="Skills"
-          textStyles="text-center text-3xl font-bold"
-        />
-      </motion.div>
+          whileInView="show"
+          viewport={{ once: false, amount: 0.25 }}
+        >
+          <CustomText
+            title="Skills"
+            textStyles="text-center text-3xl font-bold"
+          />
+        </motion.div>
         <hr className="w-10 h-1 mx-auto my-2 bg-[#839788] border-0 rounded" />
-        <div className="grid grid-cols-4 gap-3 p-5">
+        <div className="grid md:grid-cols-4 grid-cols-2 gap-3 p-5">
           <Skill
             title="JavaScript"
             subtitle="Application Development"
@@ -55,7 +51,7 @@ function Skills() {
           <Skill title="React" subtitle="Front-end development" image={react} />
           <Skill title="Node" subtitle="Back-end development" image={node} />
         </div>
-        <div className="grid grid-cols-5 gap-3">
+        <div className="grid md:grid-cols-5 grid-cols-3 gap-3">
           <Skill title="HTML 5" subtitle="Structural Design" image={html} />
           <Skill title="CSS 3" subtitle="Style Design" image={css} />
           <Skill title="GIT" subtitle="Version control system" image={git} />
@@ -83,9 +79,9 @@ function Skills() {
             image={python}
           />
         </div>
-      </motion.div>
+      </div>
       <Github />
-    </div>
+    </section>
   );
 }
 

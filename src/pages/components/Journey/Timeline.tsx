@@ -5,71 +5,52 @@ import {
 } from "react-vertical-timeline-component";
 import "react-vertical-timeline-component/style.min.css";
 import { MdWork } from "react-icons/md";
+import { IoSchool } from 'react-icons/io5';
 
 const Timeline = () => {
   return (
     <div className="w-[70%]">
       <VerticalTimeline lineColor="#e9ecef">
-        <VerticalTimelineElement
-            contentArrowStyle={{ display: "none" }}
 
-          className="vertical-timeline-element--work "
-          contentStyle={{
-            boxShadow: `var(--shadow)`,
-            backgroundColor: `var(--clr-bg)`,
-            marginLeft: '10px',
-            color: `var(--clr-fg-alt)`,
-            textAlign: "center",
-          }}
-          date="2022 - present"
+        <VerticalTimelineElement
+          className="vertical-timeline-element--education"
+          date="2021 - now"
           iconStyle={{ background: "#839788", color: "#fff" }}
-          icon={<MdWork/>}
+          icon={<MdWork />}
         >
-          <h3 className="font-bold text-gray-600 vertical-timeline-element-title">Software Engineer</h3>
-          <h4 className="text-xs text-center text-gray-300 vertical-timeline-element-subtitle">Kraków, Poland</h4>
-          <h5 className="mt-2 text-sm text-center text-gray-400">
+          <h3 className="vertical-timeline-element-title">Software Engineer</h3>
+          <h4 className="vertical-timeline-element-subtitle text-gray-400 text-sm">Capgemini</h4>
+          <p>
             React, Typescript, C#, Sharepoint Framework, Adaptive Cards
             Extensions, Specflow, Xamarin.Android
-          </h5>
+          </p>
         </VerticalTimelineElement>
-        <VerticalTimelineElement
-                    contentArrowStyle={{ display: "none" }}
 
-          className="vertical-timeline-element--work"
-          contentStyle={{
-            boxShadow: `var(--shadow)`,
-            backgroundColor: `var(--clr-bg)`,
-            color: `var(--clr-fg-alt)`,
-          }}
-          date="2022 - 2023"
+        <VerticalTimelineElement
+          className="vertical-timeline-element--education"
+          date="2020 - 2021"
           iconStyle={{ background: "#839788", color: "#fff" }}
-          icon={<MdWork />}
+          icon={<IoSchool />}
         >
-          <h3 className="font-bold text-center text-gray-600 vertical-timeline-element-title">
-            {" "}
+          <h3 className="vertical-timeline-element-title">Technical and IT Technology Education</h3>
+          <h4 className="vertical-timeline-element-subtitle text-gray-400 text-sm">Erasmus exchange</h4>
+          <p>
             Università degli Studi di Padova
-          </h3>
-          <h5 className="mt-2 text-sm text-center text-gray-400 ">Erasmus exchange</h5>
+          </p>
         </VerticalTimelineElement>
-        <VerticalTimelineElement
-                    contentArrowStyle={{ display: "none" }}
 
-          className="vertical-timeline-element--work"
-          contentStyle={{
-            boxShadow: `var(--shadow)`,
-            backgroundColor: `var(--clr-bg)`,
-            marginLeft: '10px',
-            color: `var(--clr-fg-alt)`,
-          }}
-          date="2018 - 2022"
+
+        <VerticalTimelineElement
+          className="vertical-timeline-element--education"
+          date="2018 - 2021"
           iconStyle={{ background: "#839788", color: "#fff" }}
-          icon={<MdWork />}
+          icon={<IoSchool />}
         >
-          <h3 className="font-bold text-center text-gray-600 vertical-timeline-element-title">
-            {" "}
+          <h3 className="vertical-timeline-element-title">Technical and IT Technology Education</h3>
+          <h4 className="vertical-timeline-element-subtitle text-gray-400 text-sm">Bachelor Degree</h4>
+          <p>
             Pedagogical University of Krakow
-          </h3>
-          <h5 className="mt-2 text-sm text-center text-gray-400">Technical and IT Technology Education, Bachelor Degree</h5>
+          </p>
         </VerticalTimelineElement>
       </VerticalTimeline>
     </div>

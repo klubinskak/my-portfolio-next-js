@@ -4,19 +4,15 @@ import Image from "next/image";
 import { Link } from "react-scroll";
 import avatar from "../../../assets/avatar3.jpg";
 import Type from "./Type";
-import { navVariants, slideIn } from '../../../utils/motion';
-import { motion } from "framer-motion";
+import styles from "@/styles";
 
 
 const Hero = () => {
   return (
-    <motion.div
-    variants={navVariants}
-    initial="hidden"
-    whileInView="show"
-    id="home" className="w-full h-full items-center justify-center h-[100vh] py-10 md:p-0 text-center lg:gap-10 md:flex">
+    <section
+      id="home" className="w-full h-[85vh] py-10 items-center justify-center md:p-0 text-center lg:gap-5 gap-5 md:flex">
       {" "}
-      <div className="flex flex-col items-center justify-center space-y-3 ">
+      <div className="flex flex-col items-center justify-center md:space-y-3 space-y-10">
         <div className="flex gap-2 text-4xl">
           <Type />
         </div>
@@ -43,15 +39,15 @@ const Hero = () => {
           </button>
         </Link>
       </div>
-      <div 
-      className="flex items-center justify-center">
+      <div
+        className="flex items-center justify-center">
         <Image
           src={avatar}
           alt="avatar-home"
           className="max-w-[280px] lg:max-w-[350px] text-center md:my-5 my-10 max-h-[280px] lg:max-h-[350px] object-cover rounded-[50%]"
         />
       </div>
-    </motion.div>
+    </section>
   );
 };
 

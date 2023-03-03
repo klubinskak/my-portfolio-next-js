@@ -3,34 +3,28 @@ import React from "react";
 import avatar from "../../../assets/avatar2.jpg";
 import { AiFillFileText } from "react-icons/ai";
 import Link from "next/link";
-import {
-  staggerContainer,
-} from "../../../utils/motion";
-import { motion } from "framer-motion";
 import CustomText from "../Projects/CustomText";
+import styles from "@/styles";
+import { motion } from "framer-motion";
+import { staggerContainer } from "@/utils/motion";
 
 function About() {
   return (
-    <section className="h-full p-5">
-      <motion.div
-        initial={{ x: 0, opacity: 0 }}
-        whileInView={{ x: [-250, 0], opacity: 1 }}
-        viewport={{once: false}}
-        transition={{ duration: 0.5 }}
-        id="about"
-        className="flex flex-col py-[30px] items-center justify-center"
+    <section id="about" className="py-20">
+      < div
+        className="flex flex-col justify-center items-center p-5 mt-5 py-[30px]"
       >
         <motion.div
-          variants={staggerContainer(0.5, 0.25)}
+          variants={staggerContainer}
           initial="hidden"
-        whileInView="show"
-        viewport={{ once: false, amount: 0.25 }}
-      >
-        <CustomText
-          title="About me"
-          textStyles="text-center text-3xl font-bold"
-        />
-      </motion.div>
+          whileInView="show"
+          viewport={{ once: false, amount: 0.25 }}
+        >
+          <CustomText
+            title="About me"
+            textStyles="text-center text-3xl font-bold"
+          />
+        </motion.div>
         <hr className="w-10 h-1 mx-auto my-2 bg-[#839788] border-0 rounded" />
         <div
           className="flex-row items-center justify-center md:flex gap-[50px] py-5"
@@ -64,9 +58,9 @@ function About() {
               </Link>
             </div>
           </div>
-          </div>
-        </motion.div>
-    </section>
+        </div>
+      </div >
+    </section >
   );
 }
 

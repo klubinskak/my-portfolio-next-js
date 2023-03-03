@@ -4,13 +4,13 @@ import netflix from "../../../assets/projects/netflix.png";
 import { motion } from "framer-motion";
 import ecommerce from "../../../assets/projects/ecommerce-mern.png";
 import cryptoapp from "../../../assets/projects/cryptocurrencyApp.png";
-import {
-  staggerContainer,
-} from "../../../utils/motion";
 import CustomText from "./CustomText";
+import styles from "@/styles";
+import { staggerContainer } from "@/utils/motion";
 
 const projectList = [
   {
+    index: 1,
     name: "E-commerce Website",
     image: ecommerce,
     desc: "Full Stack Ecommerce Website build with React, Node.js, MongoDB & Express. 🛍️",
@@ -19,6 +19,7 @@ const projectList = [
     website: "/",
   },
   {
+    index: 2,
     name: "Netflix Clone",
     image: netflix,
     desc: "Full Stack Netflix Clone build with React, Tailwind CSS, Movie API, & Firebase. 🍿",
@@ -27,6 +28,7 @@ const projectList = [
     website: "/",
   },
   {
+    index: 3,
     name: "Cryptocurrency App",
     image: cryptoapp,
     desc: "Front end application build with React JS, Ant.Design & API. 🤑",
@@ -35,6 +37,7 @@ const projectList = [
     website: "/",
   },
   {
+    index: 4,
     name: "Disney+ Clone",
     desc: "Disney+ Clone build with React, Typescript, NextJS, Tailwind CSS & Upstash. 🦄",
     image:
@@ -44,6 +47,7 @@ const projectList = [
     website: "https://disneyplusclone2.netlify.app",
   },
   {
+    index: 5,
     name: "Messenger Clone",
     desc: "Messenger clone build with React, NextJS, Hygraph, Tailwind CSS & GraphQL. 💬 ",
     image:
@@ -56,42 +60,41 @@ const projectList = [
 
 const Projects = () => {
   return (
-    <div
-      className="flex flex-col items-center justify-center py-[150px] w-full h-full text-center"
-      id="projects"
+    <section id="projects" className={`${styles.paddings}`}
     >
-      <motion.div
-        variants={staggerContainer(0.5, 0.25)}
-        initial="hidden"
-        whileInView="show"
-        viewport={{ once: false, amount: 0.25 }}
+      <div
+        className="flex flex-col items-center justify-center py-[150px] w-full h-full text-center"
       >
-        <CustomText
-          title="Projects"
-          textStyles="text-center text-3xl font-bold"
-        />
-      </motion.div>
-      <hr className="w-10 h-1 mx-auto my-2 bg-[#839788] border-0 rounded" />
-      <motion.div
-        initial={{ x: 0, opacity: 0 }}
-        whileInView={{ x: [-250, 0], opacity: 1 }}
-        viewport={{ once: false }}
-        transition={{ duration: 0.5 }}
-        className=" gap-[20px] animate-slideUpCubiBezier w-[70%] h-full mt-5 animation-delay-2"
-      >
-        {projectList.map((item) => {
-          return (
-            <Project
-              name={item.name}
-              description={item.desc}
-              image={item.image}
-              github={item.github}
-              website={item.website}
-            />
-          );
-        })}
-      </motion.div>
-    </div>
+        <motion.div
+          variants={staggerContainer}
+          initial="hidden"
+          whileInView="show"
+          viewport={{ once: false, amount: 0.25 }}
+        >
+          <CustomText
+            title="Projects"
+            textStyles="text-center text-3xl font-bold"
+          />
+        </motion.div>
+        <hr className="w-10 h-1 mx-auto my-2 bg-[#839788] border-0 rounded" />
+        <div
+          className=" gap-[20px] animate-slideUpCubiBezier w-[70%] h-full mt-5 animation-delay-2"
+        >
+          {projectList.map((item) => {
+            return (
+              <Project
+                key={item.index}
+                name={item.name}
+                description={item.desc}
+                image={item.image}
+                github={item.github}
+                website={item.website}
+              />
+            );
+          })}
+        </div>
+      </div>
+    </section>
   );
 };
 
