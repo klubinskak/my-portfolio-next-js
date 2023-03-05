@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useEffect, useState } from "react";
 import {
   VerticalTimeline,
   VerticalTimelineElement,
@@ -7,9 +7,16 @@ import "react-vertical-timeline-component/style.min.css";
 import { MdWork } from "react-icons/md";
 import { IoSchool } from 'react-icons/io5';
 import { useTheme } from "next-themes";
+import dynamic from 'next/dynamic'
 
 const Timeline = () => {
-  const { systemTheme, theme, setTheme } = useTheme();
+  const { theme } = useTheme();
+  const [themeStatus, setThemeStatus] = useState<any | null>(null);
+
+
+  useEffect(() => {
+    setThemeStatus(theme);
+  }, [theme])
 
   return (
     <div className="w-[70%]">
@@ -18,7 +25,7 @@ const Timeline = () => {
         <VerticalTimelineElement
           id="vertical-timeline"
           contentStyle={{
-            background: theme === 'dark' ? '#22223b' : '#F3F4F6', color: theme === 'dark' ? 'white' : 'black'
+            background: themeStatus === 'dark' ? '#22223b' : '#F3F4F6', color: theme === 'dark' ? 'white' : 'black'
           }}
           contentArrowStyle={{ borderRight: '#22223b' }}
 
@@ -39,7 +46,7 @@ const Timeline = () => {
           id="vertical-timeline"
           className="vertical-timeline-element--education"
           contentStyle={{
-            background: theme === 'dark' ? '#22223b' : '#F3F4F6', color: theme === 'dark' ? 'white' : 'black'
+            background: themeStatus === 'dark' ? '#22223b' : '#F3F4F6', color: theme === 'dark' ? 'white' : 'black'
           }}
           date="2020 - 2021"
           iconStyle={{ background: "#839788", color: "#fff" }}
@@ -57,7 +64,7 @@ const Timeline = () => {
           id="vertical-timeline"
           className="vertical-timeline-element--education"
           contentStyle={{
-            background: theme === 'dark' ? '#22223b' : '#F3F4F6', color: theme === 'dark' ? 'white' : 'black'
+            background: themeStatus === 'dark' ? '#22223b' : '#F3F4F6', color: theme === 'dark' ? 'white' : 'black'
           }}
           date="2018 - 2021"
           iconStyle={{ background: "#839788", color: "#fff" }}
