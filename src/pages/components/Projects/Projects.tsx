@@ -77,7 +77,9 @@ const Projects = () => {
           />
         </motion.div>
         <hr className="w-10 h-1 mx-auto my-2 bg-[#839788] border-0 rounded" />
-        <div
+        <motion.div
+          whileInView={{ x: [-250, 0], opacity: 1 }}
+          transition={{ duration: 0.5 }}
           className=" gap-[20px] animate-slideUpCubiBezier w-[70%] h-full mt-5 animation-delay-2"
         >
           {projectList.map((item) => {
@@ -92,7 +94,7 @@ const Projects = () => {
               />
             );
           })}
-        </div>
+        </motion.div>
       </div>
     </section>
   );

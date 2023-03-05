@@ -6,13 +6,22 @@ import {
 import "react-vertical-timeline-component/style.min.css";
 import { MdWork } from "react-icons/md";
 import { IoSchool } from 'react-icons/io5';
+import { useTheme } from "next-themes";
 
 const Timeline = () => {
+  const { systemTheme, theme, setTheme } = useTheme();
+
   return (
     <div className="w-[70%]">
       <VerticalTimeline lineColor="#e9ecef">
 
         <VerticalTimelineElement
+          id="vertical-timeline"
+          contentStyle={{
+            background: theme === 'dark' ? '#22223b' : '#F3F4F6', color: theme === 'dark' ? 'white' : 'black'
+          }}
+          contentArrowStyle={{ borderRight: '#22223b' }}
+
           className="vertical-timeline-element--education"
           date="2021 - now"
           iconStyle={{ background: "#839788", color: "#fff" }}
@@ -27,7 +36,11 @@ const Timeline = () => {
         </VerticalTimelineElement>
 
         <VerticalTimelineElement
+          id="vertical-timeline"
           className="vertical-timeline-element--education"
+          contentStyle={{
+            background: theme === 'dark' ? '#22223b' : '#F3F4F6', color: theme === 'dark' ? 'white' : 'black'
+          }}
           date="2020 - 2021"
           iconStyle={{ background: "#839788", color: "#fff" }}
           icon={<IoSchool />}
@@ -41,7 +54,11 @@ const Timeline = () => {
 
 
         <VerticalTimelineElement
+          id="vertical-timeline"
           className="vertical-timeline-element--education"
+          contentStyle={{
+            background: theme === 'dark' ? '#22223b' : '#F3F4F6', color: theme === 'dark' ? 'white' : 'black'
+          }}
           date="2018 - 2021"
           iconStyle={{ background: "#839788", color: "#fff" }}
           icon={<IoSchool />}

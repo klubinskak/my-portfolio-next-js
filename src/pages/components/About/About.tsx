@@ -6,7 +6,7 @@ import Link from "next/link";
 import CustomText from "../Projects/CustomText";
 import styles from "@/styles";
 import { motion } from "framer-motion";
-import { staggerContainer } from "@/utils/motion";
+import { slideIn, staggerContainer } from "@/utils/motion";
 
 function About() {
   return (
@@ -26,7 +26,11 @@ function About() {
           />
         </motion.div>
         <hr className="w-10 h-1 mx-auto my-2 bg-[#839788] border-0 rounded" />
-        <div
+        <motion.div
+          initial={{ x: 0, opacity: 0 }}
+          whileInView={{ x: [-250, 0], opacity: 1 }}
+          viewport={{ once: false }}
+          transition={{ duration: 0.5 }}
           className="flex-row items-center justify-center md:flex gap-[50px] py-5"
         >
           <div
@@ -58,7 +62,7 @@ function About() {
               </Link>
             </div>
           </div>
-        </div>
+        </motion.div>
       </div >
     </section >
   );
