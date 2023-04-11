@@ -1,8 +1,6 @@
 import React from "react";
 import Project from "./Project";
-import netflix from "../../../assets/projects/netflix.png";
 import { motion } from "framer-motion";
-import ecommerce from "../../../assets/projects/ecommerce-mern.png";
 import cryptoapp from "../../../assets/projects/cryptocurrencyApp.png";
 import CustomText from "./CustomText";
 import styles from "@/styles";
@@ -12,7 +10,7 @@ const projectList = [
   {
     index: 1,
     name: "E-commerce Website",
-    image: ecommerce,
+    image: '/ecommerce-mern.png',
     desc: "Full Stack Ecommerce Website build with React, Node.js, MongoDB & Express. 🛍️",
     skills: "React, Node.js, MongoDB, Express",
     github: "https://github.com/klubinskak/ecommerce-react-mern",
@@ -20,12 +18,12 @@ const projectList = [
   },
   {
     index: 2,
-    name: "Netflix Clone",
-    image: netflix,
-    desc: "Full Stack Netflix Clone build with React, Tailwind CSS, Movie API, & Firebase. 🍿",
-    skills: "React, TailwindCSS, Movie API, Firebase",
-    github: "https://github.com/klubinskak/netflix-clone-react.git",
-    website: "/",
+    name: "Landing page sushi restaurant",
+    image: '/sushi.png',
+    desc: "Landing page for sushi restaurant. 🍱",
+    skills: "ReactTS, NextJS, TailwindCSS",
+    github: "https://github.com/klubinskak/sushi-website-restaurant-nextjs/tree/main",
+    website: "https://sushi-website-restaurant-nextjs.vercel.app/",
   },
   {
     index: 3,
