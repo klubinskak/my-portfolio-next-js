@@ -5,6 +5,7 @@ import cryptoapp from "../../../assets/projects/cryptocurrencyApp.png";
 import CustomText from "./CustomText";
 import styles from "@/styles";
 import { staggerContainer } from "@/utils/motion";
+import fitnessApp from '../../../assets/projects/fitness-app-preview.png';
 
 const projectList = [
   {
@@ -18,9 +19,9 @@ const projectList = [
   },
   {
     index: 2,
-    name: "Landing page sushi restaurant",
+    name: "Website for sushi restaurant with blog feature",
     image: '/sushi.png',
-    desc: "Landing page for sushi restaurant. 🍱",
+    desc: "Full Stack application for display information about sushi restaurant with blog feature. Created with NextJS, Sanity.io and TailwindCSS.🍱",
     skills: "ReactTS, NextJS, TailwindCSS",
     github: "https://github.com/klubinskak/sushi-website-restaurant-nextjs/tree/main",
     website: "https://sushi-website-restaurant-nextjs.vercel.app/",
@@ -29,13 +30,23 @@ const projectList = [
     index: 3,
     name: "Cryptocurrency App",
     image: cryptoapp,
-    desc: "Front end application build with React JS, Ant.Design & API. 🤑",
+    desc: "Front-end application build with React JS, Ant.Design & API. 🤑",
     skills: "React JS, Ant.Design, API",
     github: "https://github.com/klubinskak/cryptocurrency-app",
     website: "/",
   },
   {
     index: 4,
+    name: "Fitness App",
+    desc: "Gym and food tracker application, built with React Native, Firebase, TailwindCSS 🏋🏼",
+    image:
+      fitnessApp,
+    skills: "React Native, Firebase, TailwindCSS",
+    github: "https://github.com/klubinskak/gym-react-native-app",
+    website: "/",
+  },
+  {
+    index: 5,
     name: "Disney+ Clone",
     desc: "Disney+ Clone build with React, Typescript, NextJS, Tailwind CSS & Upstash. 🦄",
     image:
@@ -43,16 +54,6 @@ const projectList = [
     skills: "NextJS, TailwindCSS, Upstash, Typescript",
     github: "https://github.com/klubinskak/disney-plus-clone",
     website: "https://disneyplusclone2.netlify.app",
-  },
-  {
-    index: 5,
-    name: "Messenger Clone",
-    desc: "Messenger clone build with React, NextJS, Hygraph, Tailwind CSS & GraphQL. 💬 ",
-    image:
-      "https://user-images.githubusercontent.com/76222513/211889223-9f29967d-6736-48ec-84b1-eceb8b877b5f.png",
-    skills: "NextJS, Hygraph, TailwindCSS, GraphQL",
-    github: "https://github.com/klubinskak/messenger-2.0",
-    website: "/",
   },
 ];
 
