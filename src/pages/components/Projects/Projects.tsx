@@ -1,11 +1,11 @@
 import React from "react";
 import Project from "./Project";
 import { motion } from "framer-motion";
-import cryptoapp from "../../../assets/projects/cryptocurrencyApp.png";
 import CustomText from "./CustomText";
 import styles from "@/styles";
 import { staggerContainer } from "@/utils/motion";
 import fitnessApp from '../../../assets/projects/fitness-app-preview.png';
+import recipe_flutter_app from '../../../assets/projects/recipe_flutter_app.png';
 
 const projectList = [
   {
@@ -26,23 +26,23 @@ const projectList = [
     github: "https://github.com/klubinskak/sushi-website-restaurant-nextjs/tree/main",
     website: "https://sushi-website-restaurant-nextjs.vercel.app/",
   },
-  {
+    {
     index: 3,
-    name: "Cryptocurrency App",
-    image: cryptoapp,
-    desc: "Front-end application build with React JS, Ant.Design & API. 🤑",
-    skills: "React JS, Ant.Design, API",
-    github: "https://github.com/klubinskak/cryptocurrency-app",
-    website: "/",
-  },
-  {
-    index: 4,
     name: "Fitness App",
-    desc: "Gym and food tracker application, built with React Native, Firebase, TailwindCSS 🏋🏼",
+    desc: "Gym, food and news tracker application, allows to search for workout & recipes, add user workout and authentication of a user 🏋🏼",
     image:
       fitnessApp,
     skills: "React Native, Firebase, TailwindCSS",
     github: "https://github.com/klubinskak/gym-react-native-app",
+    website: "/",
+  },
+  {
+    index: 4,
+    name: "Recipes Flutter App",
+    image: recipe_flutter_app,
+    desc: "Recipes application, allows to search and with user authentication 🥘",
+    skills: "React JS, Ant.Design, API",
+    github: "https://github.com/klubinskak/recipes-flutter-app",
     website: "/",
   },
   {
