@@ -25,7 +25,6 @@ const ContactForm = () => {
 
 
   const { name, email, subject, message } = values;
-  console.log(values);
 
   //required
   const onBlur = (target: EventTarget & HTMLInputElement) => setTouched((prev) => {
