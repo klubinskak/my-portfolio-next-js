@@ -6,6 +6,7 @@ import styles from "@/styles";
 import { staggerContainer } from "@/utils/motion";
 import fitnessApp from '../../../assets/projects/fitness-app-preview.png';
 import recipe_flutter_app from '../../../assets/projects/recipe_flutter_app.png';
+import hotel_booking from '../../../assets/projects/hotel-booking.png';
 
 const projectList = [
   {
@@ -19,17 +20,26 @@ const projectList = [
   },
   {
     index: 2,
+    name: "Hotel booking app",
+    image: hotel_booking,
+    desc: "Full Stack Hotel Booking App build with Angular + .NET. 🏂",
+    skills: "Angular, .NET",
+    github: "https://github.com/klubinskak/hotel-angular-app",
+    website: "/",
+  },
+  {
+    index: 3,
     name: "Website for sushi restaurant with blog feature",
     image: '/sushi.png',
-    desc: "Full Stack application for display information about sushi restaurant with blog feature. Created with NextJS, Sanity.io and TailwindCSS.🍱",
+    desc: "Full Stack application for display information about sushi restaurant with blog feature. Created with NextJS, Sanity.io and TailwindCSS. 🍱",
     skills: "ReactTS, NextJS, TailwindCSS",
     github: "https://github.com/klubinskak/sushi-website-restaurant-nextjs/tree/main",
     website: "https://sushi-website-restaurant-nextjs.vercel.app/",
   },
     {
-    index: 3,
+    index: 4,
     name: "Fitness App",
-    desc: "Gym, food and news tracker application, allows to search for workout & recipes, add user workout and authentication of a user 🏋🏼",
+    desc: "Gym, food and news tracker application, allows to search for workout & recipes, add user workout and authentication of a user. 🏋🏼",
     image:
       fitnessApp,
     skills: "React Native, Firebase, TailwindCSS",
@@ -37,16 +47,16 @@ const projectList = [
     website: "/",
   },
   {
-    index: 4,
+    index: 5,
     name: "Recipes Flutter App",
     image: recipe_flutter_app,
-    desc: "Recipes application, allows to search and with user authentication 🥘",
+    desc: "Recipes application, allows to search and with user authentication. 🥘",
     skills: "React JS, Ant.Design, API",
     github: "https://github.com/klubinskak/recipes-flutter-app",
     website: "/",
   },
   {
-    index: 5,
+    index: 6,
     name: "Disney+ Clone",
     desc: "Disney+ Clone build with React, Typescript, NextJS, Tailwind CSS & Upstash. 🦄",
     image:

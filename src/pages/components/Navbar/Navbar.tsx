@@ -85,7 +85,7 @@ const Navbar = () => {
             <div className="flex items-center justify-center gap-2">
               <img width={40} height={40} src="https://i.ibb.co/tHhKDZZ/Screenshot-2023-03-01-at-11-08-19-removebg-preview.png" alt="woman-computer-icon" />
               <h2 className="text-2xl">
-                Klubinska
+                klubinska.dev
               </h2>
             </div>
           </Link>

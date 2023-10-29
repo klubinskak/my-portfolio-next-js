@@ -12,7 +12,11 @@ import tailwindcss from "../../../assets/technology/tailwind.png";
 import mongo from "../../../assets/technology/mongo.png";
 import firebase from "../../../assets/technology/firebase.png";
 import csharp from "../../../assets/technology/csharp.svg";
+import dotnet from '../../../assets/technology/NET_Core_Logo.svg';
+import angular from "../../../assets/technology/angular.png";
+import sharepoint from "../../../assets/technology/sharepoint.png";
 import python from "../../../assets/technology/python.png";
+import powerautomate from "../../../assets/technology/powerautomate.webp";
 import Github from "./Github";
 import CustomText from "../Projects/CustomText";
 import styles from "@/styles";
@@ -40,7 +44,7 @@ function Skills() {
         <motion.div
           whileInView={{ x: [-250, 0], opacity: 1 }}
           transition={{ duration: 0.5 }}>
-          <div className="grid md:grid-cols-4 grid-cols-2 gap-3 p-5">
+          <div className="grid grid-cols-2 gap-3 p-5 md:grid-cols-5">
             <Skill
               title="JavaScript"
               subtitle="Application Development"
@@ -53,8 +57,9 @@ function Skills() {
             />
             <Skill title="React" subtitle="Front-end development" image={react} />
             <Skill title="Node" subtitle="Back-end development" image={node} />
+            <Skill title=".NET" subtitle="Back-end development" image={dotnet} />
           </div>
-          <div className="grid md:grid-cols-5 grid-cols-3 gap-3">
+          <div className="grid grid-cols-3 gap-3 md:grid-cols-5">
             <Skill title="HTML 5" subtitle="Structural Design" image={html} />
             <Skill title="CSS 3" subtitle="Style Design" image={css} />
             <Skill title="GIT" subtitle="Version control system" image={git} />
@@ -78,8 +83,23 @@ function Skills() {
             <Skill title="C#" subtitle="Software Development" image={csharp} />
             <Skill
               title="Python"
-              subtitle="Software Development"
+              subtitle="Front-end Development"
               image={python}
+            />
+                        <Skill
+              title="Angular"
+              subtitle="Software Development"
+              image={angular}
+            />
+                                    <Skill
+              title="Sharepoint Framework"
+              subtitle="Software Development"
+              image={sharepoint}
+            />
+                                                <Skill
+              title="Power Automate"
+              subtitle="Software Development"
+              image={powerautomate}
             />
           </div>
         </motion.div>
