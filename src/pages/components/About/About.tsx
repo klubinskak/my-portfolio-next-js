@@ -45,9 +45,9 @@ function About() {
           <div className="flex-col p-2">
             <p className="w-[380px] py-5 text-sm text-center">
               {" "}
-              I am 24 y.o full stack developer. I got interested in web
+              I am 25 y.o full stack developer. I got interested in web
               development and I try to expand my knowledge in this field. I am
-              open mind person with a willingness to learn and develop.
+              open mind person with a willingness to learn and develop. I am also open for relocate.
             </p>
             <div className="flex items-center justify-center">
               <Link
