@@ -17,6 +17,8 @@ import angular from "../../../assets/technology/angular.png";
 import sharepoint from "../../../assets/technology/sharepoint.png";
 import python from "../../../assets/technology/python.png";
 import powerautomate from "../../../assets/technology/powerautomate.webp";
+import nextjs from "../../../assets/technology/next-js-logo.png";
+import azureDevops from "../../../assets/technology/azuredevops.jpeg";
 import Github from "./Github";
 import CustomText from "../Projects/CustomText";
 import styles from "@/styles";
@@ -60,6 +62,11 @@ function Skills() {
             <Skill title=".NET" subtitle="Back-end development" image={dotnet} />
           </div>
           <div className="grid grid-cols-3 gap-3 md:grid-cols-5">
+          <Skill
+              title="Next.js"
+              subtitle="Application Development"
+              image={nextjs}
+            />
             <Skill title="HTML 5" subtitle="Structural Design" image={html} />
             <Skill title="CSS 3" subtitle="Style Design" image={css} />
             <Skill title="GIT" subtitle="Version control system" image={git} />
@@ -100,6 +107,11 @@ function Skills() {
               title="Power Automate"
               subtitle="Software Development"
               image={powerautomate}
+            />
+                                                            <Skill
+              title="Azure DevOps"
+              subtitle="Software Development Platform"
+              image={azureDevops}
             />
           </div>
         </motion.div>
