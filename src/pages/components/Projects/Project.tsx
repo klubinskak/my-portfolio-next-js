@@ -21,6 +21,7 @@ const Project: NextPage<Props> = (props) => {
         <Image
           className="object-cover max-h-[400px] max-w-[100%] h-[250px] md:h-[300px] rounded-2xl overflow-hidden lg:max-w-[60%] mt-5 transform hover:scale-105 duration-500 ease-in-out"
           src={image}
+          loading="lazy"
           alt="project"
           width={1000}
           height={400}

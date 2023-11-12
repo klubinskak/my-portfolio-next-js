@@ -59,7 +59,7 @@ function Skills() {
             />
             <Skill title="React" subtitle="Front-end development" image={react} />
             <Skill title="Node" subtitle="Back-end development" image={node} />
-            <Skill title=".NET" subtitle="Back-end development" image={dotnet} />
+            <Skill title="ASP.NET Core" subtitle="Back-end development" image={dotnet} />
           </div>
           <div className="grid grid-cols-3 gap-3 md:grid-cols-5">
           <Skill

@@ -5,6 +5,7 @@ import { SunIcon, MoonIcon } from "@heroicons/react/solid";
 import Link from 'next/link';
 import { navVariants } from '../../../utils/motion';
 import { motion } from "framer-motion";
+import Image from "next/image";
 
 interface NavItems {
   label: string;
@@ -64,7 +65,15 @@ const Navbar = () => {
 
     else {
       return (
+        <motion.div
+        initial={{ y: 0, opacity: 0 }}
+        viewport={{ once: false }}
+        whileInView={{ y: [-150, 0], opacity: 1 }}
+        transition={{ duration: 1 }}
+        className=""
+      >
         <MoonIcon className="h-10 text-gray-900 w-7 " role="button" onClick={() => setTheme('dark')} />
+        </motion.div>
       )
     }
   };
@@ -83,7 +92,8 @@ const Navbar = () => {
           <Link href="#home" scroll={false}>
             {" "}
             <div className="flex items-center justify-center gap-2">
-              <img width={40} height={40} src="https://i.ibb.co/tHhKDZZ/Screenshot-2023-03-01-at-11-08-19-removebg-preview.png" alt="woman-computer-icon" />
+            <Image loading="lazy"   width={40}
+  height={40} src="https://i.ibb.co/tHhKDZZ/Screenshot-2023-03-01-at-11-08-19-removebg-preview.png" alt="woman-computer-icon" />
               <h2 className="text-2xl">
                 klubinska.dev
               </h2>
@@ -91,7 +101,7 @@ const Navbar = () => {
           </Link>
         </div>
         <div className={`flex items-center gap-3 md:gap-10 font-semibold ${navbar ? "showMobileNav" : ""} `}>
-          <button id="hamburger-btn" onClick={() => setNavbar(!navbar)} className={`flex mt-1 items-center lg:hidden lg:${navbar === false}`}> {navbar ? <IoMdClose size={30} /> : <IoMdMenu size={30} />}</button>
+          <button id="hamburger-btn" onClick={() => setNavbar(!navbar)} className={`flex mt-1 items-center lg:hidden lg:${navbar === false}`}> {navbar ? <IoMdClose size={30} /> : <IoMdMenu size={30} aria-label="hamburger-menu"/>}</button>
           {NAV_ITEMS.map((item) => {
             return (
               <Link

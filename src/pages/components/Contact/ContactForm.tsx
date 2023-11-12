@@ -105,7 +105,7 @@ const ContactForm = () => {
           <FormErrorMessage>Required</FormErrorMessage>
         </FormControl>
         <div className="flex items-center justify-center md:justify-start ">
-          <Button className="mt-2 bg-black rounded md:flex hover:opacity-80 group" type="button" colorScheme="black" isDisabled={!message} isLoading={isLoading} onClick={handleSubmit} >Submit</Button>
+          <Button className="mt-2 bg-black rounded md:flex hover:opacity-80 group" type="button" colorScheme="black" isDisabled={!message} isLoading={isLoading} onClick={handleSubmit} aria-label="Submit" >Submit</Button>
         </div>
       </form>
     </>

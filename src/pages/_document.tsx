@@ -6,7 +6,6 @@ export default function Document() {
   return (
     <Html lang="en">
       <Head>
-        <title>Klaudia Klubinska</title>
       </Head>
       <body className={ env == "development" ? "debug-screens" : ""}>
         <Main />

@@ -4,9 +4,8 @@ import avatar from "../../../assets/avatar2.jpg";
 import { AiFillFileText } from "react-icons/ai";
 import Link from "next/link";
 import CustomText from "../Projects/CustomText";
-import styles from "@/styles";
 import { motion } from "framer-motion";
-import { slideIn, staggerContainer } from "@/utils/motion";
+import { staggerContainer } from "@/utils/motion";
 
 function About() {
   return (
@@ -39,6 +38,7 @@ function About() {
             <Image
               className="max-w-[220px] max-h-[220px] rounded-[20px]"
               src={avatar}
+              loading="lazy"
               alt="avatar-about"
             />
           </div>
@@ -47,7 +47,7 @@ function About() {
               {" "}
               I am 25 y.o full stack developer. I got interested in web
               development and I try to expand my knowledge in this field. I am
-              open mind person with a willingness to learn and develop. I am also open for relocate.
+              open mind person with a willingness to learn and develop. I am also open for relocate. 
             </p>
             <div className="flex items-center justify-center">
               <Link
@@ -55,7 +55,7 @@ function About() {
                 target="_blank"
                 download
               >
-                <button className="flex justify-center items-center bg-black rounded-[7px] text-white text-xs p-2 px-3 gap-2">
+                <button aria-label="Download cv" className="flex justify-center items-center bg-black rounded-[7px] text-white text-xs p-2 px-3 gap-2">
                   <p>Download cv</p>
                   <AiFillFileText />
                 </button>

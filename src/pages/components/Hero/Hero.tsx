@@ -10,9 +10,9 @@ import styles from "@/styles";
 const Hero = () => {
   return (
     <section
-      id="home" className="w-full h-[85vh] py-10 items-center justify-center md:p-0 text-center lg:gap-5 gap-5 md:flex">
+      id="home" className="w-full h-[100vh] py-10 items-center justify-center md:p-0 text-center lg:gap-5 gap-5 md:flex">
       {" "}
-      <div className="flex flex-col items-center justify-center md:space-y-3 space-y-10">
+      <div className="flex flex-col items-center justify-center space-y-10 md:space-y-3">
         <div className="flex gap-2 text-4xl">
           <Type />
         </div>
@@ -33,18 +33,20 @@ const Hero = () => {
           offset={-150}
           duration={500}
         >
-          <button data-testid="contact-me" className="flex items-center justify-center gap-2 p-2 px-4 py-2 text-xs text-white duration-300 bg-black rounded hover:opacity-80 group">
+          <button data-testid="contact-me" className="flex items-center justify-center gap-2 p-2 px-4 py-2 text-xs text-white duration-300 bg-black rounded hover:opacity-80 group" aria-label="Contact Me">
             <p>Contact Me</p>
             <TbSend className="group-hover:rotate-45" />
           </button>
         </Link>
       </div>
       <div
-        className="flex items-center justify-center">
+        className="relative w-[400px] h-[380px] rounded-md mx-auto my-5 md:mx-10">
         <Image
           src={avatar}
+          loading="lazy"
           alt="avatar-home"
-          className="max-w-[280px] lg:max-w-[350px] text-center md:my-5 my-10 max-h-[280px] lg:max-h-[350px] object-cover rounded-[50%]"
+          fill
+          className="rounded-[50%] object-cover"
         />
       </div>
     </section>
