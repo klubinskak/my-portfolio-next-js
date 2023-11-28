@@ -79,7 +79,7 @@ const Navbar = () => {
     >
       {isActive ? (
         <MoonIcon
-          className="h-10 text-gray-900 w-7"
+          className="h-10 text-white-900 w-7"
           role="button"
         />
       ) : (
