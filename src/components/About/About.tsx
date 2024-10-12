@@ -1,6 +1,6 @@
 import Image from "next/image";
 import React from "react";
-import avatar from "../../../assets/avatar2.jpg";
+import avatar from "../../assets/avatar2.jpg";
 import { AiFillFileText } from "react-icons/ai";
 import Link from "next/link";
 import CustomText from "../Projects/CustomText";

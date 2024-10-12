@@ -2,7 +2,7 @@ import React from "react";
 import { TbSend } from "react-icons/tb";
 import Image from "next/image";
 import { Link } from "react-scroll";
-import avatar from "../../../assets/avatar3.jpg";
+import avatar from "../../assets/avatar3.jpg";
 import Type from "./Type";
 
 

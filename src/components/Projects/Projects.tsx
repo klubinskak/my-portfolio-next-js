@@ -4,9 +4,9 @@ import { motion } from "framer-motion";
 import CustomText from "./CustomText";
 import styles from "@/styles";
 import { staggerContainer } from "@/utils/motion";
-import fitnessApp from '../../../assets/projects/fitness-app-preview.png';
-import recipe_flutter_app from '../../../assets/projects/recipe_flutter_app.png';
-import hotel_booking from '../../../assets/projects/hotel-booking.png';
+import fitnessApp from '../../assets/projects/fitness-app-preview.png';
+import recipe_flutter_app from '../../assets/projects/recipe_flutter_app.png';
+import hotel_booking from '../../assets/projects/hotel-booking.png';
 
 const projectList = [
   {

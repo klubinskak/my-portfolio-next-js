@@ -2,7 +2,7 @@ import type { AppProps } from "next/app";
 import { ChakraProvider } from "@chakra-ui/react";
 import "../styles/globals.css";
 import Head from "next/head";
-import { ThemeWrapper } from "./theme-wrapper";
+import { ThemeWrapper } from "@/components/Layout/theme-wrapper";
 
 export default function App({ Component, pageProps }: AppProps) {
   

@@ -1,3 +1,4 @@
+import { sendContactForm } from "@/lib/api";
 import {
   FormControl,
   FormErrorMessage,
@@ -7,7 +8,6 @@ import {
   useToast
 } from "@chakra-ui/react";
 import React, { useState } from "react";
-import { sendContactForm } from '../../../lib/api';
 
 const initialState = {
   name: "",

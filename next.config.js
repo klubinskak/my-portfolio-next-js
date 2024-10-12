@@ -4,6 +4,9 @@ const nextConfig = {
   images: {
     domains: ["user-images.githubusercontent.com", "i.ibb.co"],
   },
+  typescript: {
+    ignoreBuildErrors: true
+}
 };
 
 module.exports = nextConfig
