@@ -1,12 +1,13 @@
 import type { AppProps } from "next/app";
 import { ChakraProvider } from "@chakra-ui/react";
 import "../styles/globals.css";
-import { ThemeProvider } from "next-themes";
 import Head from "next/head";
+import { ThemeWrapper } from "./theme-wrapper";
 
 export default function App({ Component, pageProps }: AppProps) {
+  
   return (
-    <ThemeProvider enableSystem={true} attribute="class">
+    <ThemeWrapper>
       <ChakraProvider>
         <Head>
         <title>Klaudia Klubinska</title>
@@ -14,6 +15,6 @@ export default function App({ Component, pageProps }: AppProps) {
         </Head>
         <Component {...pageProps} />
       </ChakraProvider>
-    </ThemeProvider>
+    </ThemeWrapper>
   );
 }

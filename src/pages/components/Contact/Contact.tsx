@@ -37,7 +37,7 @@ const Contact = () => {
           </div>
           <div
             className="space-y-2 text-center sm:text-left">
-            <p className="py-2 mt-10 font-bold md:mt-0">Send me a message </p>
+            <p className="py-2 mt-10 font-bold md:mt-0 text-xl">Send me a message </p>
             <ContactForm />
           </div>
         </div>

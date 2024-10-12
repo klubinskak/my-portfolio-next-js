@@ -17,9 +17,9 @@ const Project: NextPage<Props> = (props) => {
 
   return (
     <section id="projects">
-      <div className="flex flex-col items-center justify-center w-full gap-5 p-10 px-8 lg:flex-row">
+      <div className="flex flex-col items-center justify-center w-full gap-5 p-10 px-2 lg:flex-row">
         <Image
-          className="object-cover max-h-[400px] max-w-[100%] h-[250px] md:h-[300px] rounded-2xl overflow-hidden lg:max-w-[60%] mt-5 transform hover:scale-105 duration-500 ease-in-out"
+          className="object-cover h-[250px] md:h-[300px] rounded-2xl overflow-hidden lg:max-w-[60%] mt-5 transform hover:scale-105 duration-500 ease-in-out"
           src={image}
           loading="lazy"
           alt="project"

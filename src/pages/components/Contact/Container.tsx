@@ -10,13 +10,11 @@ interface Props {
 
 const Container: NextPage<Props> = (props) => {
   const { title, link, icon } = props;
-
   return (
-    <div id="container-contact" className="w-[250px] h-[150px] border-gray-100 pt-8 space-y-3 border-2 rounded-2xl flex-col justify-between items-center text-center">
-      <Link href={link ?? ""} className="flex items-center justify-center text-center">
-        {icon}
+    <div id="container-contact" className="w-[250px] h-[150px] border-gray-100  space-y-3 border-2 rounded-2xl flex-col justify-center items-center text-center">
+      <Link href={link ?? ""} className="font-bold space-x-2 hover:text-blue-400 transition duration-300 flex w-full h-full items-center gap-3 justify-center text-center">
+        {icon} {title}
       </Link>
-      <h2 className="text-lg font-bold">{title}</h2>
     </div>
   );
 };

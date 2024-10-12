@@ -9,11 +9,11 @@ const Footer = () => {
       className='p-5 mx-10'>
       <hr />
       <div className="flex items-center justify-around w-full py-5 ">
-        <p>&#169; 2023 Klaudia Klubinska</p>
+        <p className='text-xs'>&#169; 2024 Klaudia Klubinska</p>
         <div className='flex gap-2'>
           <Link href="https://github.com/klubinskak"><AiFillGithub size={30} /> </Link>
           <Link href="https://www.linkedin.com/in/klaudiaklubinska/"> <AiFillLinkedin size={32} /> </Link>
-          <Link href="/blog"> <SiBloglovin size={30} /> </Link>
+          <Link href="https://www.klaudiadev.com/"> <SiBloglovin size={30} /> </Link>
         </div>
       </div>
     </div>

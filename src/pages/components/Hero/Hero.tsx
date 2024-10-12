@@ -4,7 +4,6 @@ import Image from "next/image";
 import { Link } from "react-scroll";
 import avatar from "../../../assets/avatar3.jpg";
 import Type from "./Type";
-import styles from "@/styles";
 
 
 const Hero = () => {
@@ -18,12 +17,12 @@ const Hero = () => {
         </div>
         <div className="flex items-center gap-2 font-bold text-center">
           <hr className="w-[70px]" />
-          <p id="job-title" className="text-xs text-black">Software Engineer</p>
+          <p id="job-title" className="text-xs text-black">Software Developer</p>
           <hr className="w-[70px]" />
         </div>
         <p className="text-sm font-normal md:w-[450px] text-center w-[300px] ">
-          A passionate Software Engineer having an experience of building Web
-          applications with JavaScript / React / Nodejs / MongoDB / TailwindCSS and some
+          A passionate Software Developer having an experience of building Web
+          applications with <span className="font-bold">Typescript / React / Angular / C# / Node.js / ASP.NET / MongoDB / MSSQL / TailwindCSS / PrimeNG </span> and some
           other cool libraries and frameworks.
         </p>
         <Link

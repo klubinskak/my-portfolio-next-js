@@ -28,14 +28,33 @@ const Timeline = () => {
           contentArrowStyle={{ borderRight: '#22223b' }}
 
           className="vertical-timeline-element--education"
-          date="november 2023 - now"
+          date="august 2024 - now"
           iconStyle={{ background: "#839788", color: "#fff" }}
           icon={<MdWork />}
         >
-          <h3 className="vertical-timeline-element-title">Junior Application Developer</h3>
+          <h3 className="vertical-timeline-element-title font-bold">Application Developer</h3>
           <h4 className="text-sm text-gray-400 vertical-timeline-element-subtitle">Westinghouse</h4>
           <p>
-            Angular, Typescript, C#, ASP.NET Core, SQL
+            Angular, Typescript, C#, ASP.NET, SQL, MSSQL, DevOps, Azure Pipelines, PrimenNG, PrimeFlex
+          </p>
+        </VerticalTimelineElement>
+        
+      <VerticalTimelineElement
+          id="vertical-timeline"
+          contentStyle={{
+            background: themeStatus === 'dark' ? '#22223b' : '#F3F4F6', color: theme === 'dark' ? 'white' : 'black'
+          }}
+          contentArrowStyle={{ borderRight: '#22223b' }}
+
+          className="vertical-timeline-element--education"
+          date="november 2023 - august 2024"
+          iconStyle={{ background: "#839788", color: "#fff" }}
+          icon={<MdWork />}
+        >
+          <h3 className="vertical-timeline-element-title font-bold">Junior Application Developer</h3>
+          <h4 className="text-sm text-gray-400 vertical-timeline-element-subtitle">Westinghouse</h4>
+          <p>
+            Angular, Typescript, C#, ASP.NET, SQL, MSSQL
           </p>
         </VerticalTimelineElement>
         <VerticalTimelineElement
@@ -50,7 +69,7 @@ const Timeline = () => {
           iconStyle={{ background: "#839788", color: "#fff" }}
           icon={<MdWork />}
         >
-          <h3 className="vertical-timeline-element-title">Junior Software Developer</h3>
+          <h3 className="vertical-timeline-element-title font-bold">Junior Software Developer</h3>
           <h4 className="text-sm text-gray-400 vertical-timeline-element-subtitle">Capgemini</h4>
           <p>
             React, Typescript, C#, Sharepoint Framework, Adaptive Cards
@@ -64,11 +83,11 @@ const Timeline = () => {
           contentStyle={{
             background: themeStatus === 'dark' ? '#22223b' : '#F3F4F6', color: theme === 'dark' ? 'white' : 'black'
           }}
-          date="2021 - 2022"
+          date="september 2021 - february 2022"
           iconStyle={{ background: "#839788", color: "#fff" }}
           icon={<IoSchool />}
         >
-          <h3 className="vertical-timeline-element-title">Technical and IT Technology Education</h3>
+          <h3 className="vertical-timeline-element-title font-bold">Technical and IT Technology Education</h3>
           <h4 className="text-sm text-gray-400 vertical-timeline-element-subtitle">Erasmus exchange</h4>
           <p>
             Università degli Studi di Padova
@@ -82,11 +101,11 @@ const Timeline = () => {
           contentStyle={{
             background: themeStatus === 'dark' ? '#22223b' : '#F3F4F6', color: theme === 'dark' ? 'white' : 'black'
           }}
-          date="2018 - 2022"
+          date="october 2018 - february 2022"
           iconStyle={{ background: "#839788", color: "#fff" }}
           icon={<IoSchool />}
         >
-          <h3 className="vertical-timeline-element-title">Technical and IT Technology Education</h3>
+          <h3 className="vertical-timeline-element-title font-bold">Technical and IT Technology Education</h3>
           <h4 className="text-sm text-gray-400 vertical-timeline-element-subtitle">Bachelor Degree</h4>
           <p>
             Pedagogical University of Krakow

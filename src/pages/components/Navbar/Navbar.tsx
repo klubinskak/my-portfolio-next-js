@@ -93,8 +93,6 @@ const Navbar = () => {
   };
   
 
-  console.log(isActive)
-
   return (
     <motion.div
       variants={navVariants}
@@ -148,8 +146,8 @@ const Navbar = () => {
                   navbar ? "showList" : ""
                 } lg:flex cursor-pointer before:hidden before:lg:absolute before:block before:w-full before:h-[3px] 
                 before:bottom-0 before:left-0 before:bg-[#839788] 
-                before:hover:scale-x-100 before:scale-x-0 before:origin-top-left
-                before:transition before:ease-in-out before:duration-300`}
+                hover:scale-x-100 before:scale-x-0 before:origin-top-left
+                before:transition before:ease-in-out before:duration-300 hover:text-[#849788]  transform hover:-translate-y-1 transition duration-300`}
               >
                 {item.label}
               </Link>
